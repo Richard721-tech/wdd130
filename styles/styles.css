@@ -45,15 +45,11 @@ aside img {
 }
 
 footer {
-    background-color: darkblue;
-}
-
-footer p {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
     color: white;
-
+    background-color: darkblue;
 }
 
 footer a {
