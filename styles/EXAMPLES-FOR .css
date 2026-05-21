@@ -1,0 +1,63 @@
+/* relative positioning can be use for positioning 
+text May cover other content when moved 
+from its original location and can also stay 
+in it natural position */
+
+.shifted-text {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    background-color: yellow;
+}
+
+/* absolute positioning 
+When you use position: absolute,
+the element is positioned relative to its closest positioned parent element. If no parent element has positioning set,
+the element will be positioned relative to the entire webpage body. The element is removed from the normal document flow,
+which means other elements will act as if it does not exist. 
+Removes element from document flow – Other elements fill the space as if the positioned element is not there Positioned relative to closest positioned parent – Looks for the nearest parent with position set to relative,
+absolute,
+or fixed Stays with the page content when the page scrolls –
+ The element moves with the page content when users scroll Can overlap other elements –
+ May cover or be covered by other page content The following example creates a popup window that appears 50 pixels from the top and 20 pixels from the right edge of its positioned parent element. */
+
+.popup-window {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 200px;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+/* Fixed Positioning When you use position: fixed,
+the element is positioned relative to the browser window itself. The element stays in the exact same place on the screen even when users scroll up or down the page. This makes fixed positioning perfect for navigation bars,
+headers,
+or buttons that should always remain visible. Removes element from document flow – Other elements fill the space as if the positioned element is not there Positioned relative to browser window – Always uses the viewport (visible area) as the reference point Stays in same screen location when scrolling – Does not move when users scroll the page Always visible to users – Remains on screen regardless of page length or scroll position The following example creates a header that stays at the top of the browser window even when users scroll down the page. The z-index property ensures the header appears above other page content. */
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: blue;
+    color: white;
+    z-index: 100;
+}
+
+/* Images and position/sizing CSS is often used to set the position and size of an image. When setting the size of an image,
+remember that images can become pixelated or distorted if you change the aspect ratio of their original dimensions. To avoid this,
+typically only set either the width or height in CSS,
+preserving the aspect ratio. When an image is within a container that has defined dimensions,
+using width: 100% on the image is a standard approach to make it fill the container. To make sure the images in your document have good aspect ratios by default,
+it is recommended that you start with the following CSS declaration for all of your work in this class to help control the aspect ratio of images.  */
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* The CSS above sets all image widths in the document to 100% of the width of their containers and the height to auto,
+thus maintaining the image's intrinsic aspect ratio. */
