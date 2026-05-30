@@ -24,57 +24,58 @@ main img {
     padding: 2px;
     box-shadow: 0 0 30px gray;
     float: right;
+}
 
-    p {
-        padding: 0;
-    }
+p {
+    padding: 0;
+}
 
-    aside {
-        width: 20rem;
-        margin: 1rem;
-        border: 1px solid rgb(0 0 0 /10%);
-        padding: 1rem;
-        background-color: #333;
-        color: #333;
+aside {
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 /10%);
+    padding: 1rem;
+    background-color: #333;
+    color: #333;
 
-    }
+}
 
-    aside h2 {
-        position: absolute;
-        top: 47px;
-        left: 150px;
-    }
+aside h2 {
+    position: absolute;
+    top: 47px;
+    left: 150px;
+}
 
-    aside img {
-        width: 200px;
-        height: auto;
-    }
+aside img {
+    width: 200px;
+    height: auto;
+}
 
-    footer {
-        margin-top: 15px;
-        border-top: 1px solid #000;
-        text-align: center;
-        color: white;
-        background-color: darkblue;
-    }
+footer {
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
+    color: white;
+    background-color: darkblue;
+}
 
-    footer a {
-        color: lightseagreen;
+footer a {
+    color: lightseagreen;
 
-    }
+}
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    /* class selctor  */
+/* class selctor  */
 
-    .box {
-        margin: 1rem;
-        border: 1px solid rgb(0 0 0 / 10%);
-        padding: 1rem;
-        background: #333;
-        color: #eee;
-    }
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background: #333;
+    color: #eee;
+}
