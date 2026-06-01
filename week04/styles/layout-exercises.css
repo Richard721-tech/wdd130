@@ -10,10 +10,15 @@ body {
     font-size: 1.2rem;
 }
 
+div p {
+    align-self: center;
+}
+
 div {
     margin: 1rem;
     border: 1px dashed;
     padding: 1rem;
+    align-items: center;
 }
 
 .one {
@@ -24,6 +29,7 @@ div {
 .flex {
     background-color: #aba;
     /* write declarations here */
+    align-items: center;
 
 }
 
@@ -35,7 +41,8 @@ div {
 
 .container2 {
     /* write declarations here */
-
+    display: flex;
+    justify-content: space-around;
 }
 
 .two {
@@ -45,12 +52,14 @@ div {
 
 .container3 {
     /* write declarations here */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 
 }
 
 .columns-3 {
     /* write declaration here */
-
+    grid-area: 1/1/1/4;
 }
 
 .three {
