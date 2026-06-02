@@ -31,7 +31,7 @@ footer {
     background-color: var(--secondary-color);
 }
 
-figure {
+.veiws {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
@@ -41,6 +41,60 @@ figure {
 figure img {
     width: 150px;
     height: 100px;
+}
+
+/* 1. The main section container background and border styling */
+.Adventure-section {
+    /* Light gray background matching the image */
+    /* Thin dark border box wrapper outline */
+    padding: 20px;
+    margin: 30px auto;
+}
+
+/* Centers the heading cleanly above the grid row layout */
+.Adventure-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: transparent;
+    /* Overrides previous bright backgrounds */
+    background-color: #062b5a;
+    color: var(--secondary-color);
+}
+
+/* 2. The grid layout wrapper holding only the five figure elements */
+.views {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* Splits row into 5 equal columns */
+    gap: 15px;
+    /* Adds uniform space between the cards */
+    align-items: start;
+}
+
+/* 3. Styling rules targeting the figure element boxes */
+.views figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    /* Centers both image placeholder and caption text */
+}
+
+/* Makes sure the photo placeholders behave cleanly and scale within columns */
+.views figure img {
+    width: 150px;
+    max-width: 120px;
+    /* Limits size to match the small squares in the layout image */
+    height: 100px;
+    display: block;
+    margin: 0 auto 8px auto;
+    /* Centers image and adds a gap above caption */
+}
+
+/* 4. Caption labels text decoration styling */
+.views figcaption {
+    font-size: 0.8rem;
+    color: #333333;
+    line-height: 1.3;
 }
 
 .three {
