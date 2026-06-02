@@ -31,6 +31,36 @@ footer {
     background-color: var(--secondary-color);
 }
 
+figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 3px;
+}
+
+figure img {
+    width: 150px;
+    height: 100px;
+}
+
+.three {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 5px;
+}
+
+.history-section img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.history-section h2 {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
 /* --- Header & Horizontal Navigation Layout --- */
 header nav {
     display: flex;
