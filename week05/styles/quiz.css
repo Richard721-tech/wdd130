@@ -1,0 +1,67 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Merriweather, Georgia, serif;
+    font-size: 1.7em;
+    color: #333;
+    background: #fff;
+}
+
+legend {
+
+    padding-bottom: 20px;
+}
+
+header {
+    margin: 0 auto;
+    width: 650px;
+    padding-left: 90px;
+    padding-bottom: 10px;
+    font-size: xx-large;
+    color: navy;
+}
+
+input,
+select {
+    padding: 0.3rem;
+    font-size: 1.1rem;
+    width: 500px;
+}
+
+.challenge {
+    background-color: #333;
+    color: aliceblue;
+    max-width: 300px;
+    padding: left;
+    float: left;
+    text-align: center;
+    margin: 0.8rem;
+    font-size: 1.0rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+    margin: 1rem;
+    background-color: navy;
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    padding: 1.0rem;
+    font-size: 1.2rem;
+    width: 500px;
+}
+
+form {
+    width: 650px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    border-radius: 0.5rem;
+    background-color: #eee;
+    display: grid;
+}
