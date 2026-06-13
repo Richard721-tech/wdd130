@@ -160,6 +160,11 @@ header nav {
 
 }
 
+.form-box {
+    flex: 1;
+    width: 50%;
+}
+
 header nav a {
     display: flex;
     align-items: center;
