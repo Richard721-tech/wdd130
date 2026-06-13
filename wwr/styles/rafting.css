@@ -39,7 +39,6 @@ nav a {
 }
 
 .head {
-    align-items: right;
     background-color: darkblue;
     padding: 1rem;
     display: flex;
@@ -164,7 +163,6 @@ header nav {
 header nav a {
     display: flex;
     align-items: center;
-    gap
 }
 
 header nav img {
