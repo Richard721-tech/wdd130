@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .blob {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.35;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .blob1 {
+            width: 260px;
+            height: 260px;
+            background: #7c3aed;
+            top: -60px;
+            left: -60px;
+        }
+
+        .blob2 {
+            width: 200px;
+            height: 200px;
+            background: #2563eb;
+            bottom: -40px;
+            right: -40px;
+            animation-delay: 2s;
+        }
+
+        .blob3 {
+            width: 150px;
+            height: 150px;
+            background: #db2777;
+            top: 50%;
+            right: 20px;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-20px)
+            }
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            width: 340px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .logo-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 1.8rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #7c3aed, #2563eb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon i {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .float-field {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .float-field input {
+            width: 100%;
+            height: 52px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 12px;
+            padding: 18px 14px 6px 42px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
+        }
+
+        .float-field input::placeholder {
+            color: transparent;
+        }
+
+        .float-field input:focus {
+            border-color: rgba(124, 58, 237, 0.8);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+        }
+
+        .float-field label {
+            position: absolute;
+            left: 42px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+            pointer-events: none;
+            transition: all 0.25s ease;
+        }
+
+        .float-field input:focus~label,
+        .float-field input:not(:placeholder-shown)~label {
+            top: 14px;
+            transform: translateY(0) scale(0.82);
+            color: rgba(167, 139, 250, 1);
+        }
+
+        .float-field .ficon {
+            position: absolute;
+            left: 13px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 18px;
+        }
+
+        .float-field .eye-btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 18px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 12px;
+        }
+
+        .remember input {
+            accent-color: #7c3aed;
+        }
+
+        .forgot {
+            font-size: 12px;
+            color: rgba(167, 139, 250, 0.9);
+            text-decoration: none;
+        }
+
+        .sign-btn {
+            width: 100%;
+            height: 46px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #7c3aed, #2563eb);
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: opacity 0.2s;
+        }
+
+        .sign-btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn-shine {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+            transform: skewX(-20deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100%
+            }
+
+            30%,
+            100% {
+                left: 160%
+            }
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 1.2rem 0;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 12px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .social-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-btn {
+            flex: 1;
+            height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.06);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: background 0.2s;
+        }
+
+        .social-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .bottom-text {
+            text-align: center;
+            margin-top: 1.2rem;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        .bottom-text a {
+            color: rgba(167, 139, 250, 0.9);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+    <div class="glass">
+        <div class="logo-row">
+            <div class="logo-icon"><i class="ti ti-droplet"></i></div>
+            <span class="logo-text">Richy Dos Water Rafting Company</span>
+        </div>
+
+        <div class="float-field">
+            <input type="email" id="em" placeholder="email">
+            <label for="em">Email address</label>
+            <i class="ti ti-mail ficon"></i>
+        </div>
+
+        <div class="float-field">
+            <input type="password" id="pw" placeholder="password">
+            <label for="pw">Password</label>
+            <i class="ti ti-lock ficon"></i>
+            <button class="eye-btn" onclick="togglePw()" type="button">
+                <i class="ti ti-eye" id="eyeIco"></i>
+            </button>
+        </div>
+
+        <div class="options">
+            <label class="remember"><input type="checkbox"> Remember me</label>
+            <a href="#" class="forgot">Forgot password?</a>
+        </div>
+
+        <button class="sign-btn" type="button">
+            <span class="btn-shine"></span>
+            Sign in
+        </button>
+
+        <div class="divider">or continue with</div>
+
+        <div class="social-row">
+            <button class="social-btn"><i class="ti ti-brand-google"></i> Google</button>
+        </div>
+
+        <div class="bottom-text">No account? <a href="#">Create one free</a></div>
+    </div>
+
+    <script>
+        function togglePw() {
+            const pw = document.getElementById('pw');
+            const ico = document.getElementById('eyeIco');
+            const show = pw.type === 'password';
+            pw.type = show ? 'text' : 'password';
+            ico.className = show ? 'ti ti-eye-off' : 'ti ti-eye';
+        }
+    </script>
+</body>
+
+</html>
