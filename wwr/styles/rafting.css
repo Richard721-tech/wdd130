@@ -32,7 +32,7 @@ nav a {
     display: block;
     padding: 0.5rem;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #fff;
 
@@ -154,8 +154,8 @@ header {
 /* --- Header & Navigation Layout --- */
 header nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: right;
+    align-items: right;
     padding: 15px 20px;
 
 }
@@ -167,15 +167,16 @@ header nav {
 
 header nav a {
     display: flex;
-    align-items: center;
+    justify-content: space-between 15px;
 }
 
 header nav img {
     height: 70px;
     width: auto;
+    padding-right: 70%;
 }
 
-header nav ul {
+header nav a {
     display: flex;
     list-style-type: none;
     gap: 20px;
@@ -185,6 +186,7 @@ header nav a {
     text-decoration: none;
     color: var(--primary-color);
     font-weight: bold;
+    font: bold;
 }
 
 header nav a:hover {
