@@ -26,6 +26,53 @@ body {
     background-color: var(--secondary-color);
 }
 
+CSS
+
+/* Layout the navigation bar */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    /* Pushes logo to left, ul to right */
+    align-items: center;
+    /* Vertically centers everything */
+    padding: 10px 40px;
+    /* Adds breathing room on the sides */
+    background-color: #ffffff;
+}
+
+/* Constrain the logo size so it fits neatly */
+.logo {
+    height: 60px;
+    /* Adjust height to match your image size */
+    width: auto;
+}
+
+/* Turn the bulleted list into a horizontal row */
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    /* Removes default bullet points */
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+    /* Creates even spacing between each link */
+}
+
+/* Style the navigation links */
+.main-nav a {
+    text-decoration: none;
+    /* Removes the default underline */
+    color: #004b8d;
+    /* The dark blue color from the image */
+    font-weight: bold;
+    /* Makes the text stand out */
+    font-family: Arial, sans-serif;
+    /* Clean, modern font */
+    font-size: 16px;
+    transition: color 0.2s ease;
+    /* Smooth transition for a hover effect */
+}
+
 nav a {
     display: block;
     color: white;
